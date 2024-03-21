@@ -1,0 +1,74 @@
+@use '#sass/_colors.module.scss' as colors;
+
+.logotype {
+  width: 120px;
+  height: min-content;
+  user-select: none;
+  -webkit-user-drag: none;
+
+  @media (prefers-color-scheme: light) {
+    & * {
+      fill: colors.$logotype-color-dark;
+    }
+  }
+
+  @media (prefers-color-scheme: dark) {
+    & * {
+      fill: colors.$logotype-color-light;
+    }
+  }
+}
+
+.header {
+  position: sticky;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 70px;
+  padding: 0 24px;
+  backdrop-filter: blur(24px);
+
+  @media (min-width: 768px) {
+    & {
+      height: 100px;
+      padding: 0 32px;
+    }
+  }
+
+  & > .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+  }
+
+  & > .extraNav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+  }
+
+  @media (prefers-color-scheme: light) {
+    & {
+      background: rgba(colors.$base-color-light, .9);
+      border-bottom: 1px solid rgba(colors.$base-color-dark, .03);
+    }
+  }
+
+  @media (prefers-color-scheme: dark) {
+    & {
+      background: rgba(colors.$base-color-dark, .9);
+      border-bottom: 1px solid rgba(colors.$base-color-light, .03);
+    }
+  }
+
+  @media (min-width: 768px) {
+    & {
+      border: none;
+    }
+  }
+}

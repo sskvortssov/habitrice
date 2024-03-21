@@ -42,14 +42,72 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 12px;
+    gap: 24px;
   }
 
   & > .extraNav {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 12px;
+    gap: 8px;
+
+    a {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+      padding: 12px;
+      border-radius: 12px;
+      font-size: 14px;
+      font-weight: 500;
+      text-decoration: none;
+      user-select: none;
+      -webkit-user-drag: none;
+      opacity: .6;
+      transition:
+        200ms background ease,
+        200ms opacity ease;
+
+      &:has(span) {
+        padding: 12px 18px;
+      }
+
+      &.active {
+        opacity: 1;
+
+        @media (prefers-color-scheme: light) {
+          & {
+            background: rgba(colors.$base-color-dark, .1);
+          }
+        }
+
+        @media (prefers-color-scheme: dark) {
+          & {
+            background: rgba(colors.$base-color-light, .1);
+          }
+        }
+      }
+
+      @media (prefers-color-scheme: light) {
+        & {
+          color: colors.$base-color-dark;
+          background: rgba(colors.$base-color-dark, .06);
+        }
+      }
+
+      @media (prefers-color-scheme: dark) {
+        & {
+          color: colors.$base-color-light;
+          background: rgba(colors.$base-color-light, .06);
+        }
+      }
+
+      @media (min-width: 768px) {
+        & {
+          opacity: .5;
+        }
+      }
+    }
   }
 
   @media (prefers-color-scheme: light) {

@@ -6,6 +6,17 @@ import useMediaQuery from '@mui/material/useMediaQuery'
 import Habitrice from '#assets/Habitrice.svg?react'
 import SettingsRoundedIcon from '@mui/icons-material/SettingsRounded'
 
+const NavLink = ({ to, children }: {
+  to: string,
+  children: React.ReactNode,
+}) => {
+  const location = useLocation()
+
+  return (
+    <Link to={to} className={location.pathname === to ? styles.active : ''}>{children}</Link>
+  )
+}
+
 const Header = () => {
   const matches = useMediaQuery('(min-width: 768px)')
   const location = useLocation()
@@ -18,9 +29,12 @@ const Header = () => {
         }</div>
         <div className={styles.extraNav}>{
           matches ? <>
-            <Link to='/inbox'><InboxRoundedIcon /></Link>
-            <Link to='/me'>Denis Skvortsov <AccountCircleRoundedIcon /></Link>
-          </> : location.pathname === '/me' && <Link to='/settings'><SettingsRoundedIcon /></Link>
+            <NavLink to='/inbox'><InboxRoundedIcon /></NavLink>
+            <NavLink to='/me'>
+              <AccountCircleRoundedIcon />
+              <span>Denis Skvortsov</span>
+            </NavLink>
+          </> : location.pathname === '/me' && <NavLink to='/settings'><SettingsRoundedIcon /></NavLink>
         }</div>
       </header>
     </>

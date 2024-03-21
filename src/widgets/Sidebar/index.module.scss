@@ -64,7 +64,7 @@
       -webkit-user-drag: none;
       z-index: 10;
       opacity: .6;
-      transition: all opacity ease;
+      transition: 200ms opacity ease;
 
       &.active {
         gap: 8px;
@@ -86,10 +86,6 @@
             gap: 12px;
           }
         }
-      }
-
-      &[href='/settings'] {
-        display: none;
       }
 
       & > span {
@@ -126,18 +122,6 @@
           gap: 12px;
           height: 48px;
           padding: 0 32px;
-        }
-
-        &[href='/settings'] {
-          display: flex;
-        }
-
-        &[href='/inbox'] {
-          display: none;
-        }
-
-        &[href='/me'] {
-          display: none;
         }
       }
     }

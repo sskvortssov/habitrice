@@ -1,5 +1,18 @@
 @use '#sass/_colors.module.scss' as colors;
 
+.mainWrapper {
+  display: flex;
+  flex-direction: column-reverse;
+  gap: 32px;
+  width: 100%;
+
+  @media (min-width: 768px) {
+    & {
+      flex-direction: row;
+    }
+  }
+}
+
 .workspace {
   flex: 1;
 

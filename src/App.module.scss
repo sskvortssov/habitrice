@@ -3,9 +3,6 @@
   overflow-y: auto;
 
   & > main {
-    display: flex;
-    flex-direction: column-reverse;
-    gap: 32px;
     width: 100%;
     min-height: 150vh;
     padding: 24px 12px;

@@ -140,7 +140,7 @@
         width: calc(100% - 12px*2);
         height: calc(48px - 2px*2);
         border-radius: 12px;
-        opacity: calc(var(--navIndicatorOpacity, .05));
+        opacity: calc(var(--navIndicatorOpacity, 0));
         content: '';
         transition:
           200ms top ease,

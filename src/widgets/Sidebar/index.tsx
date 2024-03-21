@@ -28,12 +28,12 @@ const Sidebar = () => {
 
   useEffect(() => {
     if (document.querySelector(`.${styles.sidebar} nav a[href='${location.pathname}']`)) {
-      nav.current?.style.removeProperty('--navIndicatorOpacity');
+      nav.current?.style.setProperty('--navIndicatorOpacity', '1');
       // eslint-disable-next-line
       nav.current?.style.setProperty('--position', (document.querySelector(`.${styles.sidebar} nav a[href='${location.pathname}']`) as HTMLElement)?.offsetTop + 'px')
     }
     else {
-      nav.current?.style.setProperty('--navIndicatorOpacity', '0');
+      nav.current?.style.removeProperty('--navIndicatorOpacity');
       nav.current?.style.setProperty('--position', '0px')
     }
   }, [location, matches])

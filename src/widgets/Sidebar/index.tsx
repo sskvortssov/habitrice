@@ -28,7 +28,7 @@ const Sidebar = () => {
 
   useEffect(() => {
     if (document.querySelector(`.${styles.sidebar} nav a[href='${location.pathname}']`)) {
-      nav.current?.style.setProperty('--navIndicatorOpacity', '1');
+      nav.current?.style.setProperty('--navIndicatorOpacity', '.05');
       // eslint-disable-next-line
       nav.current?.style.setProperty('--position', (document.querySelector(`.${styles.sidebar} nav a[href='${location.pathname}']`) as HTMLElement)?.offsetTop + 'px')
     }

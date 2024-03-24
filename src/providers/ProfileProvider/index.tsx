@@ -33,7 +33,7 @@ export const ProfileProvider = ({ children }: {
   useEffect(() => {
     const credentials = JSON.parse(window.localStorage.getItem('CredentialsStore'))?._value
 
-    if (credentials?.username && credentials?.password) fetch('http://127.0.0.1:5000/api/users', {
+    if (credentials?.username && credentials?.password) fetch(`${import.meta.env.VITE_API_URI}/users`, {
       method: 'GET',
       headers: {
         Authorization: `Basic ${Buffer.from(`${credentials?.username}:${credentials?.password}`).toString('base64')}`

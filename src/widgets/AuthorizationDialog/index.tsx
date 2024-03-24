@@ -17,7 +17,7 @@ const AuthorizationDialog = () => {
   const password = useRef(null)
 
   const logIn = async () => {
-    await fetch('http://127.0.0.1:5000/api/users', {
+    await fetch(`${import.meta.env.VITE_API_URI}/users`, {
         method: 'GET',
         headers: {
           Authorization: `Basic ${Buffer.from(`${username.current.value}:${password.current.value}`).toString('base64')}`
@@ -47,7 +47,7 @@ const AuthorizationDialog = () => {
   }
 
   const signUp = async () => {
-    await fetch('http://127.0.0.1:5000/api/users', {
+    await fetch(`${import.meta.env.VITE_API_URI}/users`, {
         method: 'POST',
         headers: {
           Authorization: `Basic ${Buffer.from(`${username.current.value}:${password.current.value}`).toString('base64')}`

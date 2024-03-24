@@ -23,7 +23,7 @@ const Me = () => {
   }
 
   const removeProfilePicture = async () => {
-    await fetch(`http://127.0.0.1:5000/api/users/${user._id}`, {
+    await fetch(`${import.meta.env.VITE_API_URI}/users/${user._id}`, {
       method: 'PUT',
       headers: {
         Authorization: `Basic ${Buffer.from(`${user.credentials.username}:${user.credentials.password}`).toString('base64')}`,
@@ -45,7 +45,7 @@ const Me = () => {
   }
 
   const updateProfile = async () => {
-    await fetch(`http://127.0.0.1:5000/api/users/${user._id}`, {
+    await fetch(`${import.meta.env.VITE_API_URI}/users/${user._id}`, {
       method: 'PUT',
       headers: {
         Authorization: `Basic ${Buffer.from(`${user.credentials.username}:${user.credentials.password}`).toString('base64')}`,
@@ -85,7 +85,7 @@ const Me = () => {
   }
 
   const deleteProfile = async () => {
-    await fetch(`http://127.0.0.1:5000/api/users/${user._id}`, {
+    await fetch(`${import.meta.env.VITE_API_URI}/users/${user._id}`, {
         method: 'DELETE',
         headers: {
           Authorization: `Basic ${Buffer.from(`${user.credentials.username}:${user.credentials.password}`).toString('base64')}`

@@ -1,7 +1,13 @@
 import styles from './index.module.scss'
 import Habitrice from '#assets/Habitrice.svg?react'
-import { Link, useLocation } from 'react-router-dom'
-import React, { useEffect, useRef } from 'react'
+import {
+  Link,
+  useLocation,
+} from 'react-router-dom'
+import React, {
+  useEffect,
+  useRef,
+} from 'react'
 import AccountCircleRoundedIcon from '@mui/icons-material/AccountCircleRounded'
 import StorefrontRoundedIcon from '@mui/icons-material/StorefrontRounded'
 import SettingsRoundedIcon from '@mui/icons-material/SettingsRounded'

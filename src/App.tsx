@@ -1,4 +1,8 @@
-import { Route, Routes, useLocation } from 'react-router-dom'
+import {
+  Route,
+  Routes,
+  useLocation,
+} from 'react-router-dom'
 import Dashboard from './pages/dashboard'
 import Store from './pages/store'
 import Settings from './pages/settings'
@@ -8,7 +12,10 @@ import styles from './App.module.scss'
 import Header from './widgets/Header'
 import Me from './pages/me'
 import Inbox from './pages/inbox'
-import { useEffect, useRef } from 'react'
+import {
+  useEffect,
+  useRef,
+} from 'react'
 
 const App = () => {
   const page = useRef<HTMLDivElement>(null)

@@ -1,50 +1,33 @@
-import {
-  Route,
-  Routes,
-  useLocation,
-} from 'react-router-dom'
-import Dashboard from './pages/dashboard'
-import Store from './pages/store'
-import Settings from './pages/settings'
-import Sidebar from './widgets/Sidebar'
-import Habits from './pages/habits'
-import styles from './App.module.scss'
-import Header from './widgets/Header'
-import Me from './pages/me'
-import Inbox from './pages/inbox'
-import React, {
-  useEffect,
-  useRef,
-} from 'react'
-import Rating from './pages/rating'
+import { useState } from 'react'
+import reactLogo from './assets/react.svg'
+import viteLogo from '/vite.svg'
+import './App.css'
 
-const App = () => {
-  const page = useRef<HTMLDivElement>(null)
-  const location = useLocation()
-
-  useEffect(() => {
-    page.current?.scrollTo(0, 0)
-  }, [location.pathname])
+function App() {
+  const [count, setCount] = useState(0)
 
   return (
     <>
-      <Sidebar />
-      <div ref={page} className={styles.base}>
-        <Header />
-        <main>
-          <Routes>
-            <Route path='/'>
-              <Route index element={<Dashboard />} />
-              <Route path='habits' element={<Habits />} />
-              <Route path='store' element={<Store />} />
-              <Route path='rating' element={<Rating />} />
-              <Route path='settings' element={<Settings />} />
-              <Route path='inbox' element={<Inbox />} />
-              <Route path='me' element={<Me />} />
-            </Route>
-          </Routes>
-        </main>
+      <div>
+        <a href="https://vitejs.dev" target="_blank">
+          <img src={viteLogo} className="logo" alt="Vite logo" />
+        </a>
+        <a href="https://react.dev" target="_blank">
+          <img src={reactLogo} className="logo react" alt="React logo" />
+        </a>
       </div>
+      <h1>Vite + React</h1>
+      <div className="card">
+        <button onClick={() => setCount((count) => count + 1)}>
+          count is {count}
+        </button>
+        <p>
+          Edit <code>src/App.jsx</code> and save to test HMR
+        </p>
+      </div>
+      <p className="read-the-docs">
+        Click on the Vite and React logos to learn more
+      </p>
     </>
   )
 }

@@ -1,29 +1,3 @@
-<!-- <h1><b>Habitrice</b> – app for your self-development</h1>
-
-<h2>Contents</h2>
-<ul>
-  <li>
-    <a href="#summary">Summary</a>
-    <ul>
-      <li>
-        <a href="#sources">Sources</a>
-      </li>
-    </ul>
-  </li>
-</ul>
-
-<h2 name="summary">Summary</h2>
-
-<h3 name="sources">Sources</h3>
-<ul>
-  <li>
-    <a href="https://habitrice.diayuokaro.dev/">Demo</a>
-  </li>
-  <li>
-    <a href="https://github.com/Central-University-IT-prod/frontend-Diayuokaro">Source code</a>
-  </li>
-</ul> -->
-
 # <p id="title">Habitrice – app for your personal development</p>
 
 ## <p id="contents">Contents</p>
@@ -50,7 +24,7 @@
 
 ### <p id="summary_sources">Sources</p>
 
-- [Demo](https://habitrice.diayuokaro.dev/)
+- [Demo example](https://habitrice.diayuokaro.dev/)
 - [Source code](https://github.com/Central-University-IT-prod/frontend-Diayuokaro)
 
 ## <p id="how-to-setup">How to setup?</p>

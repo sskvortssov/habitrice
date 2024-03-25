@@ -7,11 +7,14 @@ import '@fontsource-variable/inter'
 import '@fontsource-variable/montserrat'
 import { BrowserRouter } from 'react-router-dom'
 import { ProfileProvider } from './providers/ProfileProvider'
+import { ThemeProvider } from './providers/ThemeProvider'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-  <BrowserRouter>
-    <ProfileProvider>
-      <App />
-    </ProfileProvider>
-  </BrowserRouter>
+  <ThemeProvider>
+    <BrowserRouter>
+      <ProfileProvider>
+        <App />
+      </ProfileProvider>
+    </BrowserRouter>
+  </ThemeProvider>
 )

@@ -11,22 +11,38 @@
 
   overflow: hidden;
 
-  @media (prefers-color-scheme: light) {
-    & {
-      color-scheme: light;
+  &[data-theme='system'] {
+    @media (prefers-color-scheme: light) {
+      & {
+        color-scheme: light;
 
-      color: colors.$base-color-dark;
-      background: colors.$base-color-light;
+        color: colors.$base-color-dark;
+        background: colors.$base-color-light;
+      }
+    }
+
+    @media (prefers-color-scheme: dark) {
+      & {
+        color-scheme: dark;
+
+        color: colors.$base-color-light;
+        background: colors.$base-color-dark;
+      }
     }
   }
 
-  @media (prefers-color-scheme: dark) {
-    & {
-      color-scheme: dark;
+  &[data-theme='light'] {
+    color-scheme: light;
 
-      color: colors.$base-color-light;
-      background: colors.$base-color-dark;
-    }
+    color: colors.$base-color-dark;
+    background: colors.$base-color-light;
+  }
+
+  &[data-theme='dark'] {
+    color-scheme: dark;
+
+    color: colors.$base-color-light;
+    background: colors.$base-color-dark;
   }
 }
 
@@ -39,15 +55,25 @@
 * {
   box-sizing: border-box;
 
-  @media (prefers-color-scheme: light) {
-    & {
-      -webkit-tap-highlight-color: rgba(colors.$base-color-dark, .03);
+  :root[data-theme='system'] & {
+    @media (prefers-color-scheme: light) {
+      & {
+        -webkit-tap-highlight-color: rgba(colors.$base-color-dark, .03);
+      }
+    }
+
+    @media (prefers-color-scheme: dark) {
+      & {
+        -webkit-tap-highlight-color: rgba(colors.$base-color-light, .03);
+      }
     }
   }
 
-  @media (prefers-color-scheme: dark) {
-    & {
-      -webkit-tap-highlight-color: rgba(colors.$base-color-light, .03);
-    }
+  :root[data-theme='light'] & {
+    -webkit-tap-highlight-color: rgba(colors.$base-color-dark, .03);
+  }
+
+  :root[data-theme='dark'] & {
+    -webkit-tap-highlight-color: rgba(colors.$base-color-light, .03);
   }
 }

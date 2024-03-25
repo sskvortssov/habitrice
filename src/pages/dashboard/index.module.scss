@@ -29,16 +29,26 @@
   height: 280px;
   border-radius: 12px;
 
-  @media (prefers-color-scheme: light) {
-    & {
-      background: rgba(colors.$base-color-dark, .06);
+  :root[data-theme='system'] & {
+    @media (prefers-color-scheme: light) {
+      & {
+        background: rgba(colors.$base-color-dark, .06);
+      }
+    }
+
+    @media (prefers-color-scheme: dark) {
+      & {
+        background: rgba(colors.$base-color-light, .06);
+      }
     }
   }
 
-  @media (prefers-color-scheme: dark) {
-    & {
-      background: rgba(colors.$base-color-light, .06);
-    }
+  :root[data-theme='light'] & {
+    background: rgba(colors.$base-color-dark, .06);
+  }
+
+  :root[data-theme='dark'] & {
+    background: rgba(colors.$base-color-light, .06);
   }
 
   @media (min-width: 768px) {

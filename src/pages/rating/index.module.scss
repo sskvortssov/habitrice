@@ -37,16 +37,26 @@
     font-weight: 600;
   }
 
-  @media (prefers-color-scheme: light) {
-    & {
-      background: rgba(colors.$base-color-dark, .03);
+  :root[data-theme='system'] & {
+    @media (prefers-color-scheme: light) {
+      & {
+        background: rgba(colors.$base-color-dark, .03);
+      }
+    }
+
+    @media (prefers-color-scheme: dark) {
+      & {
+        background: rgba(colors.$base-color-light, .03);
+      }
     }
   }
 
-  @media (prefers-color-scheme: dark) {
-    & {
-      background: rgba(colors.$base-color-light, .03);
-    }
+  :root[data-theme='light'] & {
+    background: rgba(colors.$base-color-dark, .03);
+  }
+
+  :root[data-theme='dark'] & {
+    background: rgba(colors.$base-color-light, .03);
   }
 
   @media (min-width: 768px) {

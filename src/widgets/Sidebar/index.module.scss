@@ -6,16 +6,26 @@
   user-select: none;
   -webkit-user-drag: none;
 
-  @media (prefers-color-scheme: light) {
-    & * {
-      fill: colors.$logotype-color-dark;
+  :root[data-theme='system'] & {
+    @media (prefers-color-scheme: light) {
+      & * {
+        fill: colors.$logotype-color-dark;
+      }
+    }
+
+    @media (prefers-color-scheme: dark) {
+      & * {
+        fill: colors.$logotype-color-light;
+      }
     }
   }
 
-  @media (prefers-color-scheme: dark) {
-    & * {
-      fill: colors.$logotype-color-light;
-    }
+  :root[data-theme='light'] & * {
+    fill: colors.$logotype-color-dark;
+  }
+
+  :root[data-theme='dark'] & * {
+    fill: colors.$logotype-color-light;
   }
 }
 
@@ -103,16 +113,26 @@
         }
       }
 
-      @media (prefers-color-scheme: light) {
-        & {
-          color: colors.$base-color-dark;
+      :root[data-theme='system'] & {
+        @media (prefers-color-scheme: light) {
+          & {
+            color: colors.$base-color-dark;
+          }
+        }
+
+        @media (prefers-color-scheme: dark) {
+          & {
+            color: colors.$base-color-light;
+          }
         }
       }
 
-      @media (prefers-color-scheme: dark) {
-        & {
-          color: colors.$base-color-light;
-        }
+      :root[data-theme='light'] & {
+        color: colors.$base-color-dark;
+      }
+
+      :root[data-theme='dark'] & {
+        color: colors.$base-color-light;
       }
 
       @media (min-width: 768px) {
@@ -146,33 +166,55 @@
           200ms top ease,
           200ms opacity ease;
 
-        @media (prefers-color-scheme: light) {
-          & {
-            background: colors.$base-color-dark;
+        :root[data-theme='system'] & {
+          @media (prefers-color-scheme: light) {
+            & {
+              background: colors.$base-color-dark;
+            }
+          }
+
+          @media (prefers-color-scheme: dark) {
+            & {
+              background: colors.$base-color-light;
+            }
           }
         }
 
-        @media (prefers-color-scheme: dark) {
-          & {
-            background: colors.$base-color-light;
-          }
+        :root[data-theme='light'] & {
+          background: colors.$base-color-dark;
+        }
+
+        :root[data-theme='dark'] & {
+          background: colors.$base-color-light;
         }
       }
     }
   }
 
-  @media (prefers-color-scheme: light) {
-    & {
-      background: rgba(colors.$base-color-light, .8);
-      border-top: 1px solid rgba(colors.$base-color-dark, .05);
+  :root[data-theme='system'] & {
+    @media (prefers-color-scheme: light) {
+      & {
+        background: rgba(colors.$base-color-light, .8);
+        border-top: 1px solid rgba(colors.$base-color-dark, .05);
+      }
+    }
+
+    @media (prefers-color-scheme: dark) {
+      & {
+        background: rgba(colors.$base-color-dark, .8);
+        border-top: 1px solid rgba(colors.$base-color-light, .05);
+      }
     }
   }
 
-  @media (prefers-color-scheme: dark) {
-    & {
-      background: rgba(colors.$base-color-dark, .8);
-      border-top: 1px solid rgba(colors.$base-color-light, .05);
-    }
+  :root[data-theme='light'] & {
+    background: rgba(colors.$base-color-light, .8);
+    border-top: 1px solid rgba(colors.$base-color-dark, .05);
+  }
+
+  :root[data-theme='dark'] & {
+    background: rgba(colors.$base-color-dark, .8);
+    border-top: 1px solid rgba(colors.$base-color-light, .05);
   }
 
   @media (min-width: 768px) {

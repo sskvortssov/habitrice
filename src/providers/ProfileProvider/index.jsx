@@ -22,7 +22,7 @@ const defaultContext = {
 
 export const ProfileContext = createContext({
   user: defaultContext,
-  setUser: (_newUser) => {},
+  setUser: () => {},
 })
 
 export const ProfileProvider = ({ children }) => {

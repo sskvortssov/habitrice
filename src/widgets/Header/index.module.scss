@@ -6,16 +6,26 @@
   user-select: none;
   -webkit-user-drag: none;
 
-  @media (prefers-color-scheme: light) {
-    & * {
-      fill: colors.$logotype-color-dark;
+  :root[data-theme='system'] & {
+    @media (prefers-color-scheme: light) {
+      & * {
+        fill: colors.$logotype-color-dark;
+      }
+    }
+
+    @media (prefers-color-scheme: dark) {
+      & * {
+        fill: colors.$logotype-color-light;
+      }
     }
   }
 
-  @media (prefers-color-scheme: dark) {
-    & * {
-      fill: colors.$logotype-color-light;
-    }
+  :root[data-theme='light'] & * {
+    fill: colors.$logotype-color-dark;
+  }
+
+  :root[data-theme='dark'] & * {
+    fill: colors.$logotype-color-light;
   }
 }
 
@@ -76,16 +86,26 @@
       &.active {
         opacity: 1;
 
-        @media (prefers-color-scheme: light) {
-          & {
-            background: rgba(colors.$base-color-dark, .1);
+        :root[data-theme='system'] & {
+          @media (prefers-color-scheme: light) {
+            & {
+              background: rgba(colors.$base-color-dark, .1);
+            }
+          }
+
+          @media (prefers-color-scheme: dark) {
+            & {
+              background: rgba(colors.$base-color-light, .1);
+            }
           }
         }
 
-        @media (prefers-color-scheme: dark) {
-          & {
-            background: rgba(colors.$base-color-light, .1);
-          }
+        :root[data-theme='light'] & {
+          background: rgba(colors.$base-color-dark, .1);
+        }
+
+        :root[data-theme='dark'] & {
+          background: rgba(colors.$base-color-light, .1);
         }
       }
 
@@ -99,18 +119,30 @@
         pointer-events: none;
       }
 
-      @media (prefers-color-scheme: light) {
-        & {
-          color: colors.$base-color-dark;
-          background: rgba(colors.$base-color-dark, .06);
+      :root[data-theme='system'] & {
+        @media (prefers-color-scheme: light) {
+          & {
+            color: colors.$base-color-dark;
+            background: rgba(colors.$base-color-dark, .06);
+          }
+        }
+
+        @media (prefers-color-scheme: dark) {
+          & {
+            color: colors.$base-color-light;
+            background: rgba(colors.$base-color-light, .06);
+          }
         }
       }
 
-      @media (prefers-color-scheme: dark) {
-        & {
-          color: colors.$base-color-light;
-          background: rgba(colors.$base-color-light, .06);
-        }
+      :root[data-theme='light'] & {
+        color: colors.$base-color-dark;
+        background: rgba(colors.$base-color-dark, .06);
+      }
+
+      :root[data-theme='dark'] & {
+        color: colors.$base-color-light;
+        background: rgba(colors.$base-color-light, .06);
       }
 
       @media (min-width: 768px) {
@@ -129,18 +161,30 @@
     }
   }
 
-  @media (prefers-color-scheme: light) {
-    & {
-      background: rgba(colors.$base-color-light, .9);
-      border-bottom: 1px solid rgba(colors.$base-color-dark, .03);
+  :root[data-theme='system'] & {
+    @media (prefers-color-scheme: light) {
+      & {
+        background: rgba(colors.$base-color-light, .9);
+        border-bottom: 1px solid rgba(colors.$base-color-dark, .03);
+      }
+    }
+
+    @media (prefers-color-scheme: dark) {
+      & {
+        background: rgba(colors.$base-color-dark, .9);
+        border-bottom: 1px solid rgba(colors.$base-color-light, .03);
+      }
     }
   }
 
-  @media (prefers-color-scheme: dark) {
-    & {
-      background: rgba(colors.$base-color-dark, .9);
-      border-bottom: 1px solid rgba(colors.$base-color-light, .03);
-    }
+  :root[data-theme='light'] & {
+    background: rgba(colors.$base-color-light, .9);
+    border-bottom: 1px solid rgba(colors.$base-color-dark, .03);
+  }
+
+  :root[data-theme='dark'] & {
+    background: rgba(colors.$base-color-dark, .9);
+    border-bottom: 1px solid rgba(colors.$base-color-light, .03);
   }
 
   @media (min-width: 768px) {

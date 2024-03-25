@@ -8,9 +8,11 @@ import React, {
 } from 'react'
 import { useLocation } from 'react-router-dom'
 import { ProfileContext } from '#providers/ProfileProvider'
+import { ThemeContext } from '#providers/ThemeProvider'
 
 const AuthorizationDialog = () => {
   const location = useLocation()
+  const { colorScheme, setColorScheme } = useContext(ThemeContext)
   const { user, setUser } = useContext(ProfileContext)
   const [mode, setMode] = useState('login')
   const username = useRef(null)
@@ -93,6 +95,13 @@ const AuthorizationDialog = () => {
           <button onClick={() => mode === 'login' ? logIn() : mode === 'signup' && signUp()}>{mode === 'login' ? 'Log In' : mode === 'signup' && 'Sign Up'}</button>
           <button onClick={() => setMode((state) => state === 'login' ? 'signup' : state === 'signup' && 'login')}>{mode === 'login' ? 'I want to Sign Up' : mode === 'signup' && 'I want to Log In'}</button>
         </div>
+        <hr />
+        <label>
+          <span>Color scheme: </span>
+          <select defaultValue={colorScheme} onChange={(event) => setColorScheme(event.target.value)}>{
+            ['system', 'light', 'dark'].map((option) => (<option key={option} value={option}>{option}</option>))
+          }</select>
+        </label>
       </div>
     </>
   )

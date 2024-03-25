@@ -52,10 +52,10 @@ const Me = () => {
         'Content-Type': 'application/json',
       },
       body: JSON.stringify({
-        username: username.current.value,
-        fullname: fullname.current.value,
-        pronouns: pronouns.current.value,
-        picture: await getPicture(picture.current),
+        username: username.current?.value,
+        fullname: fullname.current?.value,
+        pronouns: pronouns.current?.value,
+        picture: picture.current?.files[0] && await getPicture(picture.current),
       }),
     })
       .then((response) => response.json())
@@ -88,7 +88,8 @@ const Me = () => {
     await fetch(`${import.meta.env.VITE_API_URI}/users/${user._id}`, {
         method: 'DELETE',
         headers: {
-          Authorization: `Basic ${Buffer.from(`${user.credentials.username}:${user.credentials.password}`).toString('base64')}`
+          Authorization: `Basic ${Buffer.from(`${user.credentials.username}:${user.credentials.password}`).toString('base64')}`,
+          'Content-Type': 'application/json',
         },
       })
         .then((response) => response.json())

@@ -27,14 +27,14 @@ export const ProfileContext = createContext({
 
 export const ProfileProvider = ({ children }) => {
   const [user, setUser] = useState(defaultContext)
+  const credentials = JSON.parse(window.localStorage.getItem('CredentialsStore'))?._value
 
   useEffect(() => {
-    const credentials = JSON.parse(window.localStorage.getItem('CredentialsStore'))?._value
-
     if (credentials?.username && credentials?.password) fetch(`${import.meta.env.VITE_API_URI}/users`, {
       method: 'GET',
       headers: {
-        Authorization: `Basic ${Buffer.from(`${credentials?.username}:${credentials?.password}`).toString('base64')}`
+        Authorization: `Basic ${Buffer.from(`${credentials?.username}:${credentials?.password}`).toString('base64')}`,
+        'Content-Type': 'application/json',
       },
     })
       .then((response) => response.json())
@@ -45,15 +45,7 @@ export const ProfileProvider = ({ children }) => {
         })
       })
       .catch((error) => {
-        setUser({})
-
-        delete credentials._value
-
-        window.localStorage.setItem('CredentialsStore', JSON.stringify({
-          _value: {},
-          _version: 1,
-        }))
-
+        window.location.href = '/'
         console.error(error)
       })
 
@@ -67,7 +59,7 @@ export const ProfileProvider = ({ children }) => {
         setUser,
       }}
     >{
-      user._id ? children : <AuthorizationDialog />
+      (credentials?.username && credentials?.password) ? children : <AuthorizationDialog />
     }</ProfileContext.Provider>
   )
 }

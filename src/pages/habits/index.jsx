@@ -10,7 +10,8 @@ const Habits = () => {
     fetch(`${import.meta.env.VITE_API_URI}/habits`, {
       method: 'GET',
       headers: {
-        Authorization: `Basic ${Buffer.from(`${user.credentials.username}:${user.credentials.password}`).toString('base64')}`
+        Authorization: `Basic ${Buffer.from(`${user.credentials.username}:${user.credentials.password}`).toString('base64')}`,
+        'Content-Type': 'application/json',
       },
     })
       .then((response) => response.json())

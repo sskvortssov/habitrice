@@ -10,7 +10,8 @@ const Rating = () => {
     fetch(`${import.meta.env.VITE_API_URI}/users/rating`, {
       method: 'GET',
       headers: {
-        Authorization: `Basic ${Buffer.from(`${user.credentials.username}:${user.credentials.password}`).toString('base64')}`
+        Authorization: `Basic ${Buffer.from(`${user.credentials.username}:${user.credentials.password}`).toString('base64')}`,
+        'Content-Type': 'application/json',
       },
     })
       .then((response) => response.json())

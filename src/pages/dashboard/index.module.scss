@@ -13,6 +13,24 @@
   }
 }
 
+.newHabit {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 100%;
+  margin: auto;
+
+  & > label {
+    width: 100%;
+  }
+
+  @media (min-width: 768px) {
+    & {
+      width: 400px;
+    }
+  }
+}
+
 .workspace {
   flex: 1;
 

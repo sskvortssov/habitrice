@@ -83,12 +83,12 @@ const AuthorizationDialog = () => {
         <div className={styles.method}>
           <h2>{mode === 'login' ? 'Login' : mode === 'signup' && 'Signup'}</h2>
           <label>
-            <span>Username: </span>
-            <input type='text' ref={username} />
+            <span>Username <span style={{opacity: .3}}>(4-24 symbols)</span>: </span>
+            <input type='text' minLength={4} maxLength={24} ref={username} />
           </label>
           <label>
-            <span>Password: </span>
-            <input type='text' ref={password} />
+            <span>Password <span style={{opacity: .3}}>(6-128 symbols)</span>: </span>
+            <input type='password' minLength={6} maxLength={128} ref={password} />
           </label>
           <button onClick={() => mode === 'login' ? logIn() : mode === 'signup' && signUp()}>{mode === 'login' ? 'Log In' : mode === 'signup' && 'Sign Up'}</button>
           <button onClick={() => setMode((state) => state === 'login' ? 'signup' : state === 'signup' && 'login')}>{mode === 'login' ? 'I want to Sign Up' : mode === 'signup' && 'I want to Log In'}</button>

@@ -129,16 +129,16 @@ const Me = () => {
     <>
       <div className={styles.profileSettings}>
         <label>
-          <span>Username: </span>
-          <input type='text' defaultValue={user?.username} ref={username} />
+          <span>Username <span style={{opacity: .3}}>(4-24 symbols)</span>: </span>
+          <input type='text' minLength={4} maxLength={24} defaultValue={user?.username} ref={username} />
         </label>
         <label>
-          <span>Fullname: </span>
-          <input type='text' defaultValue={user?.fullname} ref={fullname} />
+          <span>Fullname <span style={{opacity: .3}}>(up to 48 symbols)</span>: </span>
+          <input type='text' maxLength={48} defaultValue={user?.fullname} ref={fullname} />
         </label>
         <label>
-          <span>Pronouns: </span>
-          <input type='text' defaultValue={user?.pronouns} ref={pronouns} />
+          <span>Pronouns <span style={{opacity: .3}}>(up to 24 symbols)</span>: </span>
+          <input type='text' maxLength={24} defaultValue={user?.pronouns} ref={pronouns} />
         </label>
         <label>
           <span>Picture <span style={{opacity: .3}}>(up to 12mb)</span>: </span>

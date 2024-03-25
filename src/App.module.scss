@@ -5,11 +5,13 @@
 
   & > main {
     width: 100%;
+    margin-bottom: 70px;
     padding: 24px 12px;
 
     @media (min-width: 768px) {
       & {
         flex-direction: row;
+        margin: 0;
         padding: 0 32px;
       }
     }

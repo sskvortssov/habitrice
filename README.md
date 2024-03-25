@@ -24,9 +24,9 @@
   </li>
 </ul> -->
 
-<h1 id="title">**Habitrice** – app for your personal development</h1>
+# <p id="title">**Habitrice** – app for your personal development</p>
 
-<h2 id="contents">Contents</h2>
+## <p id="contents">Contents</p>
 
 - [**Habitrice** – app for your personal development](#title)
   - [Contents](#contents)
@@ -37,22 +37,26 @@
       - [Install NVM(Node Version Manager)](#how-to-setup_install-nvm)
         - [For Linux](#how-to-setup_install-nvm_for-linux)
         - [For Windows](#how-to-setup_install-nvm_for-windows)
+      - [Install Node.js](#how-to-setup_install-node-js)
+        - [For Linux](#how-to-setup_install-node-js_for-linux)
+        - [For Windows](#how-to-setup_install-node-js_for-windows)
+      - [Install Node.js](#how-to-setup_install-yarn)
     - [Setup](#how-to-setup_setup)
 
-<h2 id="summary">Summary</h2>
+## <p id="summary">Summary</p>
 
-<h3 id="summary_sources">Sources</h3>
+### <p id="summary_sources">Sources</p>
 
 - [Demo](https://habitrice.diayuokaro.dev/)
 - [Source code](https://github.com/Central-University-IT-prod/frontend-Diayuokaro)
 
-<h2 id="how-to-setup">How to setup?</h2>
+## <p id="how-to-setup">How to setup?</p>
 
-<h3 id="how-to-setup_preflight">Preflight</h3>
+### <p id="how-to-setup_preflight">Preflight</p>
 
-<h3 id="how-to-setup_install-nvm">Install NVM(Node Version Manager)</h3>
+### <p id="how-to-setup_install-nvm">Install NVM(Node Version Manager)</p>
 
-<h4 id="how-to-setup_install-nvm_for-linux">For Linux:</h4>
+#### <p id="how-to-setup_install-nvm_for-linux">For Linux:</p>
 
 Run
 
@@ -76,19 +80,56 @@ Reopen your terminal or run following commands for different shells in your term
 
 *ksh*: `. ~/.profile`
 
-<h4 id="how-to-setup_install-nvm_for-windows">For Windows:</h4>
+Сheck for Yarn works by run `nvm -v` command in your terminal.
+
+#### <p id="how-to-setup_install-nvm_for-windows">For Windows:</p>
 
 Take [this link](https://github.com/coreybutler/nvm-windows/releases) and download latest version of `nvm-setup.exe` from `Assets` field. Run downloaded file and following they instructions.
 
-<h3 id="how-to-setup_setup">Setup</h3>
+Сheck for Yarn works by run `nvm -v` command in your terminal.
+
+### <p id="how-to-setup_install-node-js">Install Node.js</p>
+
+#### <p id="how-to-setup_install-node-js_for-linux">For Linux:</p>
+
+Run
+
+```Bash
+nvm install --lts
+nvm use --lts
+```
+
+Сheck for Yarn works by run `node -v` and `npm -v` commands in your terminal.
+
+#### <p id="how-to-setup_install-node-js_for-windows">For Windows:</p>
+
+Run
+
+```Bash
+nvm install lts
+nvm use lts
+```
+
+Сheck for Yarn works by run `node -v` and `npm -v` commands in your terminal.
+
+### <p id="how-to-setup_install-yarn">Install Yarn</p>
+
+Run
+
+```Bash
+npm install -g yarn
+```
+
+Сheck for Yarn works by run `yarn -v` command in your terminal.
+
+### <p id="how-to-setup_setup">Setup</p>
+
+Run following commands in your terminal:
 
 ```Bash
 git clone https://github.com/Central-University-IT-prod/frontend-Diayuokaro
 cd ./frontend-Diayuokaro
 yarn
-```
-
-```Bash
 yarn run build
 yarn run preview
 ```

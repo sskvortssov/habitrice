@@ -24,9 +24,9 @@
   </li>
 </ul> -->
 
-# <p id="title">**Habitrice** – app for your personal development</p>
+<h1 id="title">**Habitrice** – app for your personal development</h1>
 
-## <p id="contents">Contents</p>
+<h2 id="contents">Contents</h2>
 
 - [**Habitrice** – app for your personal development](#title)
   - [Contents](#contents)
@@ -39,20 +39,20 @@
         - [For Windows](#how-to-setup_install-nvm_for-windows)
     - [Setup](#how-to-setup_setup)
 
-## <p id="summary">Summary</p>
+<h2 id="summary">Summary</h2>
 
-### <p id="summary_sources">Sources</p>
+<h3 id="summary_sources">Sources</h3>
 
 - [Demo](https://habitrice.diayuokaro.dev/)
 - [Source code](https://github.com/Central-University-IT-prod/frontend-Diayuokaro)
 
-## <p id="how-to-setup">How to setup?</p>
+<h2 id="how-to-setup">How to setup?</h2>
 
-### <p id="how-to-setup_preflight">Preflight</p>
+<h3 id="how-to-setup_preflight">Preflight</h3>
 
-### <p id="how-to-setup_install-nvm">Install NVM(Node Version Manager)</p>
+<h3 id="how-to-setup_install-nvm">Install NVM(Node Version Manager)</h3>
 
-#### <p id="how-to-setup_install-nvm_for-linux">For Linux:</p>
+<h4 id="how-to-setup_install-nvm_for-linux">For Linux:</h4>
 
 Run
 
@@ -76,11 +76,11 @@ Reopen your terminal or run following commands for different shells in your term
 
 *ksh*: `. ~/.profile`
 
-#### <p id="how-to-setup_install-nvm_for-windows">For Windows:</p>
+<h4 id="how-to-setup_install-nvm_for-windows">For Windows:</h4>
 
 Take [this link](https://github.com/coreybutler/nvm-windows/releases) and download latest version of `nvm-setup.exe` from `Assets` field. Run downloaded file and following they instructions.
 
-### <p id="how-to-setup_setup">Setup</p>
+<h3 id="how-to-setup_setup">Setup</h3>
 
 ```Bash
 git clone https://github.com/Central-University-IT-prod/frontend-Diayuokaro

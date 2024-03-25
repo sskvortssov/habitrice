@@ -8,6 +8,9 @@
     - [Sources](#summary_sources)
   - [🔮 How to setup?](#how-to-setup)
     - [🛫 Preflight](#how-to-setup_preflight)
+      - [Install Git](#how-to-setup_install-git)
+        - [For Linux](#how-to-setup_install-git_for-linux)
+        - [For Windows](#how-to-setup_install-git_for-windows)
       - [Install NVM(Node Version Manager)](#how-to-setup_install-nvm)
         - [For Linux](#how-to-setup_install-nvm_for-linux)
         - [For Windows](#how-to-setup_install-nvm_for-windows)
@@ -35,6 +38,20 @@
 ## <p id="how-to-setup">🔮 How to setup?</p>
 
 ### <p id="how-to-setup_preflight">🛫 Preflight</p>
+
+### <p id="how-to-setup_install-git">Install Git</p>
+
+#### <p id="how-to-setup_install-git_for-linux">For Linux:</p>
+
+Take [this link](https://git-scm.com/download/linux) and find there a command which suitable for your Package Manager.
+
+Сheck for Git works by run `git -v` command in your terminal.
+
+#### <p id="how-to-setup_install-git_for-windows">For Windows:</p>
+
+Take [this link](https://git-scm.com/download/win) and download latest version of `xx-bit Git for Windows Setup`(xx – the bitness of your operating system) from `Standalone Installer` field. Run downloaded installer and following they instructions.
+
+Сheck for Git works by run `git -v` command in your terminal.
 
 ### <p id="how-to-setup_install-nvm">Install NVM(Node Version Manager)</p>
 
@@ -66,7 +83,7 @@ Reopen your terminal or run following commands for different shells in your term
 
 #### <p id="how-to-setup_install-nvm_for-windows">For Windows:</p>
 
-Take [this link](https://github.com/coreybutler/nvm-windows/releases) and download latest version of `nvm-setup.exe` from `Assets` field. Run downloaded file and following they instructions.
+Take [this link](https://github.com/coreybutler/nvm-windows/releases) and download latest version of `nvm-setup.exe` from `Assets` field. Run downloaded installer and following they instructions.
 
 Сheck for Yarn works by run `nvm -v` command in your terminal.
 

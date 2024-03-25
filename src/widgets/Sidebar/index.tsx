@@ -63,20 +63,18 @@ const Sidebar = () => {
             <StorefrontRoundedIcon />
             <span>Store</span>
           </NavLink>
+          <NavLink to='/rating'>
+            <TrendingUpIcon />
+            <span>Rating</span>
+          </NavLink>
           {
             matches ? <NavLink to='/settings'>
               <SettingsRoundedIcon />
               <span>Settings</span>
-            </NavLink> : <>
-              <NavLink to='/rating'>
-                <TrendingUpIcon />
-                <span>Rating</span>
-              </NavLink>
-              <NavLink to='/me'>
-                <AccountCircleRoundedIcon />
-                <span>Me</span>
-              </NavLink>
-            </>
+            </NavLink> : <NavLink to='/me'>
+              <AccountCircleRoundedIcon />
+              <span>Me</span>
+            </NavLink>
           }
         </nav>
       </div>

@@ -28,8 +28,9 @@
   }
 
   & > .name {
-    font-size: 22px;
     margin-bottom: 12px;
+    font-size: 22px;
+    font-weight: 600;
   }
 
   @media (prefers-color-scheme: light) {

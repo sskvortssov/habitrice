@@ -16,10 +16,7 @@ import AirlineStopsRoundedIcon from '@mui/icons-material/AirlineStopsRounded'
 import useMediaQuery from '@mui/material/useMediaQuery'
 import TrendingUpIcon from '@mui/icons-material/TrendingUp'
 
-const NavLink = ({ to, children }: {
-  to: string,
-  children: React.ReactNode,
-}) => {
+const NavLink = ({ to, children }) => {
   const location = useLocation()
 
   return (
@@ -36,7 +33,7 @@ const Sidebar = () => {
     if (document.querySelector(`.${styles.sidebar} nav a[href='${location.pathname}']`)) {
       nav.current?.style.setProperty('--navIndicatorOpacity', '.05');
       // eslint-disable-next-line
-      nav.current?.style.setProperty('--position', (document.querySelector(`.${styles.sidebar} nav a[href='${location.pathname}']`) as HTMLElement)?.offsetTop + 'px')
+      nav.current?.style.setProperty('--position', document.querySelector(`.${styles.sidebar} nav a[href='${location.pathname}']`)?.offsetTop + 'px')
     }
     else {
       nav.current?.style.removeProperty('--navIndicatorOpacity');

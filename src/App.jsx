@@ -12,7 +12,7 @@ import styles from './App.module.scss'
 import Header from './widgets/Header'
 import Me from './pages/me'
 import Inbox from './pages/inbox'
-import {
+import React, {
   useEffect,
   useRef,
 } from 'react'

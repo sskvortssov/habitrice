@@ -1,6 +1,6 @@
 import styles from './index.module.scss'
 import Habitrice from '#assets/Habitrice.svg?react'
-import {
+import React, {
   useContext,
   useEffect,
   useRef,

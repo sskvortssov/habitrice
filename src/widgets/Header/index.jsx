@@ -11,10 +11,7 @@ import SettingsRoundedIcon from '@mui/icons-material/SettingsRounded'
 import { useContext } from 'react'
 import { ProfileContext } from '#providers/ProfileProvider'
 
-const NavLink = ({ to, children }: {
-  to: string,
-  children: React.ReactNode,
-}) => {
+const NavLink = ({ to, children }) => {
   const location = useLocation()
 
   return (

@@ -22,12 +22,10 @@ const defaultContext = {
 
 export const ProfileContext = createContext({
   user: defaultContext,
-  setUser: (_newUser: typeof defaultContext) => {},
+  setUser: (_newUser) => {},
 })
 
-export const ProfileProvider = ({ children }: {
-  children: React.ReactNode,
-}) => {
+export const ProfileProvider = ({ children }) => {
   const [user, setUser] = useState(defaultContext)
 
   useEffect(() => {

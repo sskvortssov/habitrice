@@ -35,14 +35,14 @@ const Header = () => {
           !matches && <Habitrice className={styles.logotype} width='100%' height='100%' />
         }</div>
         <div className={styles.extraNav}>
-          <span className={styles.chocCounter}>{user.account} CHOC</span>
+          <span className={styles.chocCounter}>{user.account} CHOCs</span>
+          <NavLink to='/inbox'><InboxRoundedIcon /></NavLink>
           {matches ? <>
-            <NavLink to='/inbox'><InboxRoundedIcon /></NavLink>
             <NavLink to='/me'>
               {user.picture ? <img src={user.picture} className={styles.profilePicture} /> : <AccountCircleRoundedIcon />}
               <span>{user.fullname || `@${user.username}`}</span>
             </NavLink>
-          </> : location.pathname === '/me' && <NavLink to='/settings'><SettingsRoundedIcon /></NavLink>}
+          </> : <NavLink to='/settings'><SettingsRoundedIcon /></NavLink>}
         </div>
       </header>
     </>

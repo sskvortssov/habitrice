@@ -1,0 +1,49 @@
+@use '#sass/_colors.module.scss' as colors;
+
+.profile {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 8px;
+  width: 100%;
+  padding: 20px;
+  border-radius: 20px;
+
+  & > p {
+    width: 100%;
+  }
+
+  & > .profilePicture {
+    width: 108px;
+    height: 108px;
+    margin-bottom: 24px;
+    object-fit: cover;
+    border-radius: 50vh;
+    user-select: none;
+    -webkit-user-drag: none;
+    pointer-events: none;
+  }
+
+  & > .name {
+    font-size: 22px;
+    margin-bottom: 12px;
+  }
+
+  @media (prefers-color-scheme: light) {
+    & {
+      background: rgba(colors.$base-color-dark, .03);
+    }
+  }
+
+  @media (prefers-color-scheme: dark) {
+    & {
+      background: rgba(colors.$base-color-light, .03);
+    }
+  }
+
+  @media (min-width: 768px) {
+    & {
+      width: 400px;
+    }
+  }
+}

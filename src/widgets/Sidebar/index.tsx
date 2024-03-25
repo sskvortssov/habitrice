@@ -13,8 +13,8 @@ import StorefrontRoundedIcon from '@mui/icons-material/StorefrontRounded'
 import SettingsRoundedIcon from '@mui/icons-material/SettingsRounded'
 import DashboardRoundedIcon from '@mui/icons-material/DashboardRounded'
 import AirlineStopsRoundedIcon from '@mui/icons-material/AirlineStopsRounded'
-import InboxRoundedIcon from '@mui/icons-material/InboxRounded'
 import useMediaQuery from '@mui/material/useMediaQuery'
+import TrendingUpIcon from '@mui/icons-material/TrendingUp'
 
 const NavLink = ({ to, children }: {
   to: string,
@@ -68,9 +68,9 @@ const Sidebar = () => {
               <SettingsRoundedIcon />
               <span>Settings</span>
             </NavLink> : <>
-              <NavLink to='/inbox'>
-                <InboxRoundedIcon />
-                <span>Inbox</span>
+              <NavLink to='/rating'>
+                <TrendingUpIcon />
+                <span>Rating</span>
               </NavLink>
               <NavLink to='/me'>
                 <AccountCircleRoundedIcon />

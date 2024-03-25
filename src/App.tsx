@@ -16,6 +16,7 @@ import {
   useEffect,
   useRef,
 } from 'react'
+import Rating from './pages/rating'
 
 const App = () => {
   const page = useRef<HTMLDivElement>(null)
@@ -36,6 +37,7 @@ const App = () => {
               <Route index element={<Dashboard />} />
               <Route path='habits' element={<Habits />} />
               <Route path='store' element={<Store />} />
+              <Route path='rating' element={<Rating />} />
               <Route path='settings' element={<Settings />} />
               <Route path='inbox' element={<Inbox />} />
               <Route path='me' element={<Me />} />

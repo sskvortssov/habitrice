@@ -30,7 +30,7 @@ const Rating = () => {
             user.pronouns && <p>Pronouns: {user.pronouns}</p>
           }
           <p>Account: {user.account} CHOCs</p>
-          <p>Registered : {new Date(user.createdAt).toLocaleDateString()}</p>
+          <p>Registered: {new Date(new Date(user.createdAt).getTime() + -(new Date().getTimezoneOffset()/60) * 3600 * 1000).toUTCString().replace('GMT', '')}</p>
         </div>))
       }
     </>

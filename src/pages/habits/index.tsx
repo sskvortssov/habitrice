@@ -26,8 +26,8 @@ const Habits = () => {
           <p>Description: {habit.description}</p>
           <p>Frequency: {habit.frequency}</p>
           <p>Worth: {habit.worth}</p>
-          <p>Created: {new Date(habit.createdAt).toLocaleDateString()}</p>
-          <p>Last modified: {new Date(habit.lastModifyDate).toLocaleDateString()}</p>
+          <p>Created: {new Date(new Date(habit.createdAt).getTime() + -(new Date().getTimezoneOffset()/60) * 3600 * 1000).toUTCString().replace('GMT', '')}</p>
+          <p>Last modified: {new Date(new Date(habit.lastModifyDate).getTime() + -(new Date().getTimezoneOffset()/60) * 3600 * 1000).toUTCString().replace('GMT', '')}</p>
         </div>))
       }
     </>

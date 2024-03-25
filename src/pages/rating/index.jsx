@@ -16,7 +16,7 @@ const Rating = () => {
       .then((response) => response.json())
       .then((data) => setUsers(data))
       .catch((error) => console.error(error))
-  }, [])
+  }, [user.credentials])
 
   return (
     <>

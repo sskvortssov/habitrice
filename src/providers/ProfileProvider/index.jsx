@@ -49,7 +49,7 @@ export const ProfileProvider = ({ children }) => {
       })
 
     if (!credentials?.username && !credentials?.password && location.pathname !== '/') window.location.href = '/'
-  }, [])
+  }, [user.credentials])
 
   return (
     <ProfileContext.Provider

@@ -16,7 +16,7 @@ const Habits = () => {
       .then((response) => response.json())
       .then((data) => setHabits(data))
       .catch((error) => console.error(error))
-  }, [])
+  }, [user.credentials])
 
   return (
     <>

@@ -10,7 +10,8 @@
   padding: 20px;
   border-radius: 20px;
 
-  & > p {
+  & > p,
+  & > h2 {
     width: 100%;
     max-width: 100%;
   }

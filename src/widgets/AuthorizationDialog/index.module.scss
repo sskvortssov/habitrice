@@ -39,8 +39,79 @@
   & > .method {
     display: flex;
     flex-direction: column;
-    gap: 8px;
-    padding: 24px 0;
+    gap: 10px;
+    padding: 16px 0;
+
+    label {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+
+      span {
+        user-select: none;
+        -webkit-user-drag: none;
+      }
+    }
+
+    input, button {
+      height: 40px;
+      padding: 4px 20px;
+      border: none;
+      border-radius: 12px;
+      font-size: 15px;
+      font-weight: 500;
+      outline: none;
+    }
+
+    input {
+      :root[data-theme='system'] & {
+        @media (prefers-color-scheme: light) {
+          & {
+            background: rgba(colors.$base-color-dark, .1);
+          }
+        }
+
+        @media (prefers-color-scheme: dark) {
+          & {
+            background: rgba(colors.$base-color-light, .1);
+          }
+        }
+      }
+
+      :root[data-theme='light'] & {
+        background: rgba(colors.$base-color-dark, .1);
+      }
+
+      :root[data-theme='dark'] & {
+        background: rgba(colors.$base-color-light, .1);
+      }
+    }
+
+    button {
+      cursor: pointer;
+
+      :root[data-theme='system'] & {
+        @media (prefers-color-scheme: light) {
+          & {
+            background: rgba(colors.$base-color-dark, .3);
+          }
+        }
+
+        @media (prefers-color-scheme: dark) {
+          & {
+            background: rgba(colors.$base-color-light, .3);
+          }
+        }
+      }
+
+      :root[data-theme='light'] & {
+        background: rgba(colors.$base-color-dark, .15);
+      }
+
+      :root[data-theme='dark'] & {
+        background: rgba(colors.$base-color-light, .15);
+      }
+    }
   }
 
   h2 {

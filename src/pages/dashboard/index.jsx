@@ -1,6 +1,7 @@
 import React, { useContext, useEffect, useRef, useState } from 'react'
 import styles from './index.module.scss'
 import { ProfileContext } from '#providers/ProfileProvider'
+// import PopupLayout from '../../components/PopupLayout'
 
 const Dashboard = () => {
   const habitTitle = useRef(null)
@@ -71,7 +72,6 @@ const Dashboard = () => {
         <div className={styles.workspace}>
           <div className={styles.brief}>
             <h2>Today <span>October 26</span></h2>
-            <button onClick={() => addHabit()}>Add habit</button>
           </div>
           <div className={styles.newHabit}>
             <label>
@@ -92,9 +92,10 @@ const Dashboard = () => {
               <span>Worth <span style={{opacity: .3}}>(at least 0)</span>: </span>
               <input type='number' defaultValue={1} min={0} step={1} ref={habitWorth} />
             </label>
+            <button onClick={() => addHabit()}>Add habit</button>
           </div>
           {
-            habits.map((habit) => (<div key={habit._id}>
+            habits.map((habit) => (<div className={styles.habit} key={habit._id}>
               <p>Title: {habit?.title}</p>
               <p>Description: {habit?.description}</p>
               <p>Frequency: {habit?.frequency}</p>

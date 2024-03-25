@@ -42,6 +42,9 @@
         - [For Windows](#how-to-setup_install-node-js_for-windows)
       - [Install Yarn](#how-to-setup_install-yarn)
     - [Setup](#how-to-setup_setup)
+      - [Clone repo & install dependencies](#how-to-setup_setup_introduction)
+      - [For production](#how-to-setup_setup_for-production)
+      - [For development](#how-to-setup_setup_for-development)
 
 ## <p id="summary">Summary</p>
 
@@ -124,12 +127,50 @@ npm install -g yarn
 
 ### <p id="how-to-setup_setup">Setup</p>
 
+#### <p id="how-to-setup_setup_introduction">Clone repo & install dependencies:</p>
+
 Run following commands in your terminal:
 
 ```Bash
 git clone https://github.com/Central-University-IT-prod/frontend-Diayuokaro
 cd ./frontend-Diayuokaro
 yarn
+```
+
+#### <p id="how-to-setup_setup_for-production">To build an application for production:</p>
+
+Run
+
+```Bash
 yarn run build
+```
+
+and then run
+
+```Bash
 yarn run preview
 ```
+
+or
+
+```Bash
+yarn run preview --host
+```
+
+to make the application available from other devices on the network.
+
+#### <p id="how-to-setup_setup_for-development">To launch an application for development:</p>
+
+Run
+
+```Bash
+yarn run dev
+```
+
+or
+
+```Bash
+yarn run dev --host
+```
+
+to make the application available from other devices on the network.

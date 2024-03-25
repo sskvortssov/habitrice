@@ -34,7 +34,6 @@ export const ProfileProvider = ({ children }) => {
       method: 'GET',
       headers: {
         Authorization: `Basic ${Buffer.from(`${credentials?.username}:${credentials?.password}`).toString('base64')}`,
-        'Content-Type': 'application/json',
       },
     })
       .then((response) => response.json())

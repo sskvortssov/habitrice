@@ -11,7 +11,6 @@ const Habits = () => {
       method: 'GET',
       headers: {
         Authorization: `Basic ${Buffer.from(`${user.credentials.username}:${user.credentials.password}`).toString('base64')}`,
-        'Content-Type': 'application/json',
       },
     })
       .then((response) => response.json())

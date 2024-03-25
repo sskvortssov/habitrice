@@ -22,8 +22,7 @@ const AuthorizationDialog = () => {
     await fetch(`${import.meta.env.VITE_API_URI}/users`, {
         method: 'GET',
         headers: {
-          Authorization: `Basic ${Buffer.from(`${username.current.value}:${password.current.value}`).toString('base64')}`,
-          'Content-Type': 'application/json',
+          Authorization: `Basic ${Buffer.from(`${username.current.value}:${password.current.value}`).toString('base64')}`
         },
       })
         .then((response) => response.json())
@@ -53,8 +52,7 @@ const AuthorizationDialog = () => {
     await fetch(`${import.meta.env.VITE_API_URI}/users`, {
         method: 'POST',
         headers: {
-          Authorization: `Basic ${Buffer.from(`${username.current.value}:${password.current.value}`).toString('base64')}`,
-          'Content-Type': 'application/json',
+          Authorization: `Basic ${Buffer.from(`${username.current.value}:${password.current.value}`).toString('base64')}`
         },
       })
         .then((response) => response.json())

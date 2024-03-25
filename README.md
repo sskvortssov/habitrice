@@ -122,7 +122,7 @@ npm install -g yarn
 
 Сheck for Yarn works by run `yarn -v` command in your terminal.
 
-### <p id="how-to-setup_setup">**Setup**</p>
+### **<p id="how-to-setup_setup">Setup</p>**
 
 Run following commands in your terminal:
 

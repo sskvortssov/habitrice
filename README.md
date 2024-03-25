@@ -1,13 +1,13 @@
-# <p id="title">Habitrice – app for your personal development</p>
+# <p id="title">🪄 Habitrice – app for your personal development</p>
 
-## <p id="contents">Contents</p>
+## <p id="contents">📖 Contents</p>
 
-- [**Habitrice** – app for your personal development](#title)
-  - [Contents](#contents)
-  - [Summary](#summary)
+- [🪄 **Habitrice** – app for your personal development](#title)
+  - [📖 Contents](#contents)
+  - [🧾 Summary](#summary)
     - [Sources](#summary_sources)
-  - [How to setup?](#how-to-setup)
-    - [Preflight](#how-to-setup_preflight)
+  - [🔮 How to setup?](#how-to-setup)
+    - [🛫 Preflight](#how-to-setup_preflight)
       - [Install NVM(Node Version Manager)](#how-to-setup_install-nvm)
         - [For Linux](#how-to-setup_install-nvm_for-linux)
         - [For Windows](#how-to-setup_install-nvm_for-windows)
@@ -15,21 +15,26 @@
         - [For Linux](#how-to-setup_install-node-js_for-linux)
         - [For Windows](#how-to-setup_install-node-js_for-windows)
       - [Install Yarn](#how-to-setup_install-yarn)
-    - [Setup](#how-to-setup_setup)
+    - [✨ Setup](#how-to-setup_setup)
       - [Clone repo & install dependencies](#how-to-setup_setup_introduction)
       - [For production](#how-to-setup_setup_for-production)
       - [For development](#how-to-setup_setup_for-development)
+  - [🥩 Well done](#well-done)
 
-## <p id="summary">Summary</p>
+​
+
+## <p id="summary">🧾 Summary</p>
 
 ### <p id="summary_sources">Sources</p>
 
 - [Demo example](https://habitrice.diayuokaro.dev/)
 - [Source code](https://github.com/Central-University-IT-prod/frontend-Diayuokaro)
 
-## <p id="how-to-setup">How to setup?</p>
+​
 
-### <p id="how-to-setup_preflight">Preflight</p>
+## <p id="how-to-setup">🔮 How to setup?</p>
+
+### <p id="how-to-setup_preflight">🛫 Preflight</p>
 
 ### <p id="how-to-setup_install-nvm">Install NVM(Node Version Manager)</p>
 
@@ -99,7 +104,9 @@ npm install -g yarn
 
 Сheck for Yarn works by run `yarn -v` command in your terminal.
 
-### <p id="how-to-setup_setup">Setup</p>
+---
+
+### <p id="how-to-setup_setup">✨ Setup</p>
 
 #### <p id="how-to-setup_setup_introduction">Clone repo & install dependencies:</p>
 
@@ -148,3 +155,9 @@ yarn run dev --host
 ```
 
 to make the application available from other devices on the network.
+
+​
+
+## <p id="well-done">🥩 Well done</p>
+
+**Habitrice** is well-ready for use and development. Enjoy your use 🤗

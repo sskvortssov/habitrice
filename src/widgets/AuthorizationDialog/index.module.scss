@@ -1,0 +1,58 @@
+@use '#sass/_colors.module.scss' as colors;
+
+.logotype {
+  width: 320px;
+  height: min-content;
+  user-select: none;
+  -webkit-user-drag: none;
+
+  @media (prefers-color-scheme: light) {
+    & * {
+      fill: colors.$logotype-color-dark;
+    }
+  }
+
+  @media (prefers-color-scheme: dark) {
+    & * {
+      fill: colors.$logotype-color-light;
+    }
+  }
+}
+
+.dialog {
+  display: flex;
+  flex-direction: column;
+  width: min-content;
+  height: min-content;
+  margin: auto;
+
+  & > .method {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 24px 0;
+
+    &:not(:last-child) {
+      @media (prefers-color-scheme: light) {
+        & {
+          border-bottom: 1px solid rgba(colors.$logotype-color-dark, .3);
+        }
+      }
+
+      @media (prefers-color-scheme: dark) {
+        & {
+          border-bottom: 1px solid rgba(colors.$logotype-color-light, .3);
+        }
+      }
+    }
+  }
+
+  h2 {
+    font-size: large;
+    text-align: center;
+  }
+
+  hr {
+    width: 100%;
+  }
+}

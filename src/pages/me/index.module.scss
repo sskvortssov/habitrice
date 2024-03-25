@@ -3,12 +3,10 @@
   flex-direction: column;
   gap: 12px;
   width: 100%;
-  height: min-content;
   margin: auto;
 
   & > label {
     width: 100%;
-    max-width: 100%;
   }
 
   .castProfilePicture {
